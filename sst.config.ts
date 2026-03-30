@@ -4,13 +4,21 @@
 export default $config({
   app(input) {
     return {
-      name: "tendpostpartum",
+      name: "tendpostpartumcare",
       removal: input?.stage === "production" ? "retain" : "remove",
       protect: ["production"].includes(input?.stage),
       home: "aws",
     };
   },
   async run() {
-    new sst.aws.Nextjs("MyWeb");
+    new sst.aws.Nextjs("MyWeb", {
+      domain:
+        $app.stage === "production"
+          ? {
+              name: "tendpostpartumcare.com",
+              redirects: ["www.tendpostpartumcare.com"],
+            }
+          : undefined,
+    });
   },
 });
