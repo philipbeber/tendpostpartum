@@ -1,0 +1,93 @@
+site:
+  name: "Tend Postpartum Care"
+  location: "Seattle, WA"
+  contact:
+    email: "email@example.com"
+    phone: "(908) 405-1661"
+
+navigation:
+  - Home
+  - About
+  - Contact
+  - Book Now
+
+home:
+  tagline: "Early motherhood is a season of receiving"
+  intro:
+    text: >
+      I’m here to help you rest, recover, and find your footing during this delicate time.
+    note: "My first postpartum doula experience was supporting my mom and baby brother."
+
+services:
+  title: "What does a postpartum doula do?"
+  categories:
+    - name: "Practical Support"
+      description: "Hands-on help so you can focus on bonding with your baby."
+      offerings:
+        - "Light household support (laundry, dishes, tidying)"
+        - "Simple meal prep and planning"
+        - "Newborn and sibling care so you can rest or shower"
+        - "Guidance around sleep and daily rhythms"
+
+    - name: "Emotional Support"
+      description: "A non-judgmental space for everything you’re feeling."
+      offerings:
+        - "Processing birth, feeding journeys, and transitions"
+        - "Support through highs, lows, and everything in between"
+        - "Guidance through identity shifts, overwhelm, and mood changes"
+        - "Reassurance that your experience is normal"
+
+    - name: "Partner & Family Support"
+      description: "Helping the whole family adjust."
+      offerings:
+        - "Guidance on sharing responsibilities"
+        - "Support navigating relationship changes"
+        - "Tools for communication and teamwork"
+
+    - name: "Guidance & Resources"
+      description: "Helping you make sense of information and options."
+      offerings:
+        - "Evidence-based answers on sleep, feeding, and development"
+        - "Guidance through transitions (solids, sleep changes)"
+        - "Referrals to trusted local providers"
+
+    - name: "Advocacy & Confidence"
+      description: "Helping you trust yourself and advocate for your needs."
+      offerings:
+        - "Support with pediatric visits and childcare decisions"
+        - "Preparation for workplace conversations"
+        - "Boundary-setting with family and others"
+
+about:
+  title: "Who am I?"
+  name: "Kim"
+  bio: >
+    I’m Kim; mother, daughter, sister, wife, friend, stepmom, middle child, and lifelong nurturer.
+    My call to this work comes from my own postpartum journey. I experienced a postpartum
+    mood disorder and deep isolation, despite having access to support and resources.
+
+    Postpartum felt like a haze, but I remember clearly the disorienting transition of no longer
+    being who I was, while not yet knowing who I was becoming. I am deeply motivated to help
+    others feel less alone during this transformative time.
+  training:
+    - "Postpartum doula training through Bastyr University"
+    - "Currently pursuing certification through DONA International"
+  closing: "I look forward to supporting you."
+
+contact:
+  headline: "Work With Me"
+  description: >
+    Tell me a little about yourself and your needs (if you know them), and we’ll go from there.
+  consultation_note: "Free consultation available to determine fit."
+  form_fields:
+    - first_name: required
+    - last_name: required
+    - email: required
+    - message: required
+  cta: "Send"
+
+footer:
+  business_name: "Tend Postpartum Care"
+  platform: "Squarespace"
+  location: "Seattle, WA"
+  email: "email@example.com"

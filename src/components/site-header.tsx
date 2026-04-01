@@ -5,10 +5,9 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const nav = [
-  { href: "/services", label: "Services" },
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/#journal", label: "Journal" },
-  { href: "/about#philosophy", label: "Philosophy" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 function NavLink({
@@ -45,14 +44,15 @@ export function SiteHeader() {
           href="/"
           className="font-headline text-2xl italic text-primary"
         >
-          Nurture Editorial
+          Tend Postpartum Care
         </Link>
 
         <div className="hidden items-center gap-8 md:flex md:gap-10">
           {nav.map((item) => {
             const active =
-              (item.href === "/services" && pathname === "/services") ||
-              (item.href === "/about" && pathname === "/about");
+              item.href === "/"
+                ? pathname === "/"
+                : pathname === item.href;
             return (
               <NavLink
                 key={item.href}
@@ -69,7 +69,7 @@ export function SiteHeader() {
             href="/contact"
             className="silk-touch-gradient inline-flex scale-95 rounded-full px-8 py-3 font-medium text-on-primary transition-transform duration-200 ease-in-out hover:scale-100"
           >
-            Book Consultation
+            Book Now
           </Link>
         </div>
 
@@ -104,7 +104,7 @@ export function SiteHeader() {
               className="silk-touch-gradient mt-2 inline-flex justify-center rounded-full px-8 py-3 font-medium text-on-primary"
               onClick={() => setOpen(false)}
             >
-              Book Consultation
+              Book Now
             </Link>
           </div>
         </div>

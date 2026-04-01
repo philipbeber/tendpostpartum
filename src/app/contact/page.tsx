@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ContactFaq } from "@/components/contact-faq";
 import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact & Booking",
+  title: "Contact",
 };
 
 const heroImage =
@@ -16,12 +15,14 @@ export default function ContactPage() {
       <section className="mx-auto mb-20 grid max-w-7xl grid-cols-1 items-center gap-12 px-6 md:mb-24 md:px-8 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <h1 className="font-headline mb-8 text-5xl leading-tight text-primary md:text-7xl">
-            Begin your <br />
-            <span className="font-normal italic">supported journey.</span>
+            Work with me
           </h1>
           <p className="max-w-xl text-xl leading-relaxed text-on-surface-variant">
-            Whether you are preparing for birth or navigating the early weeks of
-            postpartum, we are here to provide the nurturing care you deserve.
+            Tell me a little about yourself and your needs (if you know them),
+            and we&apos;ll go from there.
+          </p>
+          <p className="mt-6 max-w-xl text-lg font-medium text-on-surface">
+            Free consultation available to determine fit.
           </p>
         </div>
         <div className="relative lg:col-span-5">
@@ -37,9 +38,9 @@ export default function ContactPage() {
             />
           </div>
           <div className="absolute -bottom-6 -left-6 max-w-[280px] rounded-2xl bg-secondary-container p-8 text-on-secondary-container shadow-lg">
-            <p className="mb-2 text-sm font-medium italic">A gentle reminder:</p>
+            <p className="mb-2 text-sm font-medium italic">Seattle, WA</p>
             <p className="font-headline text-lg leading-tight">
-              Rest is not a luxury, it is the foundation of your healing.
+              Tend Postpartum Care
             </p>
           </div>
         </div>
@@ -49,7 +50,7 @@ export default function ContactPage() {
         <div className="space-y-16">
           <div>
             <h2 className="font-headline mb-12 text-3xl text-on-surface">
-              Connect with us
+              Contact
             </h2>
             <div className="space-y-10">
               <div className="flex items-start gap-6">
@@ -61,7 +62,12 @@ export default function ContactPage() {
                     Email
                   </p>
                   <p className="text-xl font-medium text-on-surface">
-                    hello@nurture-editorial.com
+                    <a
+                      className="hover:text-primary"
+                      href="mailto:email@example.com"
+                    >
+                      email@example.com
+                    </a>
                   </p>
                 </div>
               </div>
@@ -74,7 +80,9 @@ export default function ContactPage() {
                     Phone
                   </p>
                   <p className="text-xl font-medium text-on-surface">
-                    +1 (555) 234-8890
+                    <a className="hover:text-primary" href="tel:+19084051661">
+                      (908) 405-1661
+                    </a>
                   </p>
                 </div>
               </div>
@@ -84,54 +92,20 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="mb-1 text-xs tracking-widest text-outline uppercase">
-                    Location Served
+                    Location
                   </p>
                   <p className="text-xl font-medium text-on-surface">
-                    Greater Metropolitan Area &amp; <br />
-                    Virtual Consultations Globally
+                    Seattle, WA
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="space-y-6 rounded-[2rem] bg-surface-container-low p-10">
-            <h3 className="font-headline text-2xl text-on-surface">
-              Office Hours
-            </h3>
-            <div className="space-y-3 text-on-surface-variant">
-              <div className="flex justify-between border-b border-outline-variant/20 pb-2">
-                <span>Monday — Friday</span>
-                <span className="font-medium text-on-surface">
-                  9:00 AM — 5:00 PM
-                </span>
-              </div>
-              <div className="flex justify-between border-b border-outline-variant/20 pb-2">
-                <span>Saturday</span>
-                <span className="font-medium text-on-surface">
-                  10:00 AM — 2:00 PM
-                </span>
-              </div>
-              <div className="flex justify-between italic">
-                <span>Sunday</span>
-                <span className="font-medium text-on-surface">
-                  Closed for rest
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <ContactForm />
-      </section>
-
-      <section
-        id="faq"
-        className="mx-auto mt-28 max-w-4xl scroll-mt-28 px-6 md:mt-40 md:px-8"
-      >
-        <h2 className="font-headline mb-12 text-center text-4xl text-on-surface md:mb-16">
-          Frequently asked <span className="italic">wisdom</span>
-        </h2>
-        <ContactFaq />
+        <div id="contact-form">
+          <ContactForm />
+        </div>
       </section>
     </main>
   );

@@ -19,11 +19,11 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nurture Editorial | Modern Postpartum Sanctuary",
-    template: "%s | Nurture Editorial",
+    default: "Tend Postpartum Care | Seattle, WA",
+    template: "%s | Tend Postpartum Care",
   },
   description:
-    "A modern sanctuary for the fourth trimester—expert postpartum doula care, nourishment, and emotional support.",
+    "Postpartum doula care in Seattle, WA—practical and emotional support for early motherhood.",
 };
 
 export default function RootLayout({

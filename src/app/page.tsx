@@ -9,6 +9,31 @@ const portraitImage =
 const nourishmentImage =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuASxb2qK27YKDf3g0D9iPiAfdnWfMYtdNExT2iJEw4yk4vlkwUJj8hW-9Zog9ghLblbtdDWf-A46Bkx_cARFgVW4xlkkLI0eBoJZzMmvxk_iNAubA6s5rkAH_MZckQl8LNtvw7Ec87eKgO-D4Qt8gP9yNTfTPNioMM6gILsePFs03rAVkpUdlXfaTYOIRLawe1slTqSMfQLquZC2FEW4GV0B0R5M4siu9b0M0MNVIcyJorNuifXZL3V8gb8s4PRmBd7NyQg47SjbJeC";
 
+const serviceCategories = [
+  {
+    name: "Practical Support",
+    description:
+      "Hands-on help so you can focus on bonding with your baby.",
+  },
+  {
+    name: "Emotional Support",
+    description:
+      "A non-judgmental space for everything you’re feeling.",
+  },
+  {
+    name: "Partner & Family Support",
+    description: "Helping the whole family adjust.",
+  },
+  {
+    name: "Guidance & Resources",
+    description: "Helping you make sense of information and options.",
+  },
+  {
+    name: "Advocacy & Confidence",
+    description: "Helping you trust yourself and advocate for your needs.",
+  },
+] as const;
+
 export default function HomePage() {
   return (
     <>
@@ -20,27 +45,25 @@ export default function HomePage() {
                 Postpartum Doula Care
               </span>
               <h1 className="font-headline text-5xl leading-[1.1] text-on-surface md:text-6xl lg:text-7xl">
-                Restoring the{" "}
-                <span className="text-primary italic">Village</span> in Early
-                Motherhood.
+                Early motherhood is a season of{" "}
+                <span className="text-primary italic">receiving</span>
               </h1>
               <p className="max-w-xl text-lg leading-relaxed text-on-surface-variant">
-                A modern sanctuary designed to hold space for the fourth
-                trimester. We provide expert nourishment, emotional guidance,
-                and clinical peace of mind so you can focus on healing.
+                I&apos;m here to help you rest, recover, and find your footing
+                during this delicate time.
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-4 md:gap-6">
                 <Link
                   href="/contact"
                   className="silk-touch-gradient inline-flex rounded-full px-10 py-4 text-lg font-medium text-on-primary shadow-lg shadow-primary/20"
                 >
-                  Book Consultation
+                  Book Now
                 </Link>
                 <Link
-                  href="/about#philosophy"
+                  href="/about"
                   className="group flex items-center font-semibold text-primary"
                 >
-                  Our Philosophy
+                  About Kim
                   <span className="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">
                     arrow_forward
                   </span>
@@ -67,34 +90,29 @@ export default function HomePage() {
         <section className="bg-surface-container-low py-20 md:py-28">
           <div className="mx-auto max-w-4xl space-y-12 px-6 text-center md:px-8">
             <h2 className="font-headline text-4xl leading-tight text-on-surface md:text-5xl">
-              Your Modern Sanctuary
+              A note from my story
             </h2>
             <div className="mx-auto h-px w-24 bg-outline-variant/40" />
             <p
               id="journal"
               className="font-headline text-xl italic leading-relaxed text-on-surface-variant md:text-2xl"
             >
-              &ldquo;I believe that the birth of a mother is as significant as
-              the birth of a baby. In our fast-paced world, the fourth trimester
-              is often overlooked. My mission is to provide the quiet, expert
-              support that allows you to feel truly nurtured, heard, and
-              held.&rdquo;
+              My first postpartum doula experience was supporting my mom and
+              baby brother.
             </p>
             <div className="flex flex-col items-center pt-8">
               <div className="mb-4 h-16 w-16 overflow-hidden rounded-full border-2 border-primary-container p-1">
                 <Image
                   src={portraitImage}
-                  alt="Elena Vance, founder"
+                  alt="Kim, postpartum doula"
                   width={64}
                   height={64}
                   className="h-full w-full rounded-full object-cover"
                 />
               </div>
-              <span className="text-lg font-bold text-on-surface">
-                Elena Vance
-              </span>
+              <span className="text-lg font-bold text-on-surface">Kim</span>
               <span className="text-sm tracking-widest text-outline uppercase">
-                Founder &amp; Lead Doula
+                Postpartum doula · Seattle, WA
               </span>
             </div>
           </div>
@@ -104,60 +122,42 @@ export default function HomePage() {
           <div className="mb-16 flex flex-col items-end justify-between gap-8 md:mb-20 md:flex-row">
             <div className="max-w-2xl">
               <h2 className="font-headline mb-6 text-4xl text-on-surface md:text-5xl">
-                Honoring the <br />
-                <span className="italic">Transition</span>
+                What does a postpartum doula do?
               </h2>
               <p className="text-lg leading-relaxed text-on-surface-variant">
-                Postpartum care isn&apos;t a luxury; it&apos;s a foundational
-                need. We provide the structural support required for long-term
-                maternal wellness.
+                Support looks different for every family. Here are the areas
+                where I show up.
               </p>
             </div>
-            <button
-              type="button"
+            <Link
+              href="/services"
               className="rounded-full border border-outline/30 px-8 py-4 font-medium text-secondary transition-colors hover:bg-surface-container-high"
             >
-              Explore Our Research
-            </button>
+              Read all services
+            </Link>
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <div className="space-y-6 rounded-xl border border-outline-variant/10 bg-surface-container-lowest p-10 shadow-sm">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <span className="material-symbols-outlined">spa</span>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {serviceCategories.map((cat) => (
+              <div
+                key={cat.name}
+                className="space-y-4 rounded-xl border border-outline-variant/10 bg-surface-container-lowest p-10 shadow-sm"
+              >
+                <h3 className="font-headline text-2xl text-on-surface">
+                  {cat.name}
+                </h3>
+                <p className="leading-relaxed text-on-surface-variant">
+                  {cat.description}
+                </p>
               </div>
-              <h3 className="font-headline text-2xl text-on-surface">
-                Physical Recovery
-              </h3>
-              <p className="leading-relaxed text-on-surface-variant">
-                Specialized support for post-surgical healing, nutritional
-                replenishment, and pelvic health guidance during the first six
-                weeks.
-              </p>
-            </div>
-            <div className="space-y-6 rounded-xl bg-surface-container-high p-10">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary/10 text-secondary">
-                <span className="material-symbols-outlined">favorite</span>
-              </div>
-              <h3 className="font-headline text-2xl text-on-surface">
-                Emotional Anchoring
-              </h3>
-              <p className="leading-relaxed text-on-surface-variant">
-                A compassionate presence to navigate the hormonal shifts and
-                identity changes that come with new parenthood.
-              </p>
-            </div>
-            <div className="space-y-6 rounded-xl border border-outline-variant/10 bg-surface-container-lowest p-10 shadow-sm">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-tertiary-container/10 text-tertiary">
-                <span className="material-symbols-outlined">auto_stories</span>
-              </div>
-              <h3 className="font-headline text-2xl text-on-surface">
-                Expert Knowledge
-              </h3>
-              <p className="leading-relaxed text-on-surface-variant">
-                Evidence-based guidance on infant feeding, sleep hygiene, and
-                newborn care fundamentals tailored to your family&apos;s rhythm.
-              </p>
-            </div>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Link
+              href="/services"
+              className="silk-touch-gradient inline-flex rounded-full px-12 py-5 text-lg font-medium text-on-primary shadow-xl shadow-primary/20"
+            >
+              See full offerings
+            </Link>
           </div>
         </section>
 
@@ -179,46 +179,18 @@ export default function HomePage() {
               </div>
               <div className="order-1 space-y-10 lg:order-2">
                 <h2 className="font-headline text-4xl text-on-surface md:text-5xl">
-                  Our Core <span className="italic">Services</span>
+                  Work with <span className="italic">me</span>
                 </h2>
-                <div className="space-y-12">
-                  {[
-                    {
-                      n: "01",
-                      title: "In-Home Postpartum Support",
-                      body: "Daytime and overnight care including light housework, newborn care, and maternal rest stabilization.",
-                    },
-                    {
-                      n: "02",
-                      title: "Nourishment & Meal Prep",
-                      body: "Curated warming menus designed specifically for postpartum depletion and lactation support.",
-                    },
-                    {
-                      n: "03",
-                      title: "Sleep Architecture Consulting",
-                      body: "Developing gentle, family-centered sleep patterns that respect biological norms and maternal well-being.",
-                    },
-                  ].map((item) => (
-                    <div key={item.n} className="group cursor-pointer">
-                      <div className="flex items-start gap-6">
-                        <span className="font-headline text-3xl text-primary opacity-30">
-                          {item.n}
-                        </span>
-                        <div>
-                          <h4 className="mb-2 text-2xl transition-colors group-hover:text-primary">
-                            {item.title}
-                          </h4>
-                          <p className="text-on-surface-variant">{item.body}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <p className="text-lg leading-relaxed text-on-surface-variant">
+                  Tell me a little about yourself and your needs (if you know
+                  them), and we&apos;ll go from there. Free consultation
+                  available to determine fit.
+                </p>
                 <Link
-                  href="/services"
+                  href="/contact"
                   className="silk-touch-gradient mt-6 inline-flex rounded-full px-12 py-5 text-lg font-medium text-on-primary shadow-xl shadow-primary/20"
                 >
-                  View All Offerings
+                  Get in touch
                 </Link>
               </div>
             </div>
@@ -226,9 +198,9 @@ export default function HomePage() {
         </section>
       </main>
 
-      <NurtureToast title="Postpartum Tip">
-        Remember to rest while you can. Your only job right now is to heal and
-        bond. We&apos;ll handle the rest.
+      <NurtureToast title="Postpartum reminder">
+        Rest while you can. Your body is doing important work—and you don&apos;t
+        have to do this season alone.
       </NurtureToast>
     </>
   );
