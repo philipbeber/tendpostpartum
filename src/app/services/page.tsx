@@ -110,7 +110,7 @@ export default function ServicesPage() {
                 {cat.offerings.map((t) => (
                   <li key={t} className="flex items-start gap-3">
                     <span className="material-symbols-outlined shrink-0 text-primary text-xl">
-                      check_circle
+                      {"check_circle"}
                     </span>
                     <span className="text-on-surface leading-relaxed">
                       {t}

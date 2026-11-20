@@ -83,7 +83,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-8">
                 <div className="flex aspect-[4/5] translate-y-12 flex-col justify-end rounded-xl bg-surface-container-lowest p-8">
                   <span className="material-symbols-outlined mb-4 text-4xl text-secondary">
-                    auto_awesome
+                    {"auto_awesome"}
                   </span>
                   <p className="text-sm font-bold text-on-surface">Training</p>
                   <p className="text-xs text-on-surface-variant">
@@ -92,7 +92,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex aspect-[4/5] flex-col justify-end rounded-xl bg-surface-container-lowest p-8">
                   <span className="material-symbols-outlined mb-4 text-4xl text-secondary">
-                    ecg_heart
+                    {"ecg_heart"}
                   </span>
                   <p className="text-sm font-bold text-on-surface">Heart</p>
                   <p className="text-xs text-on-surface-variant">
@@ -132,7 +132,7 @@ export default function AboutPage() {
                   className="flex items-start gap-3 text-lg text-on-surface-variant"
                 >
                   <span className="material-symbols-outlined mt-0.5 text-primary text-xl">
-                    check_circle
+                    {"check_circle"}
                   </span>
                   <span>{line}</span>
                 </li>

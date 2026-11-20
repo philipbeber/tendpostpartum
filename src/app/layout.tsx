@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Serif, Plus_Jakarta_Sans } from "next/font/google";
+import { MaterialIconDebugProbe } from "@/components/material-icon-debug-probe";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
@@ -37,6 +38,7 @@ export default function RootLayout({
       className={`${notoSerif.variable} ${plusJakarta.variable} h-full scroll-smooth antialiased`}
     >
       <body className="selection:bg-secondary-container min-h-full font-(family-name:--font-plus-jakarta)">
+        <MaterialIconDebugProbe />
         <SiteHeader />
         <div className="pt-24 md:pt-28">{children}</div>
         <SiteFooter />

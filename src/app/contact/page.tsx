@@ -55,7 +55,7 @@ export default function ContactPage() {
             <div className="space-y-10">
               <div className="flex items-start gap-6">
                 <span className="material-symbols-outlined text-3xl text-secondary">
-                  mail
+                  {"mail"}
                 </span>
                 <div>
                   <p className="mb-1 text-xs tracking-widest text-outline uppercase">
@@ -73,7 +73,7 @@ export default function ContactPage() {
               </div>
               <div className="flex items-start gap-6">
                 <span className="material-symbols-outlined text-3xl text-secondary">
-                  call
+                  {"call"}
                 </span>
                 <div>
                   <p className="mb-1 text-xs tracking-widest text-outline uppercase">
@@ -88,7 +88,7 @@ export default function ContactPage() {
               </div>
               <div className="flex items-start gap-6">
                 <span className="material-symbols-outlined text-3xl text-secondary">
-                  location_on
+                  {"location_on"}
                 </span>
                 <div>
                   <p className="mb-1 text-xs tracking-widest text-outline uppercase">

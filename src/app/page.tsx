@@ -65,7 +65,7 @@ export default function HomePage() {
                 >
                   About Kim
                   <span className="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">
-                    arrow_forward
+                    {"arrow_forward"}
                   </span>
                 </Link>
               </div>
